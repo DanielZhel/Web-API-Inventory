@@ -1,15 +1,17 @@
 using Microsoft.Extensions.Configuration;
 using Web_API_Inventory;
+using Web_API_Inventory.Model;
+using Web_API_Inventory.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration.AddJsonFile("InventorySettings.json", false);
+//builder.Configuration.AddJsonFile("InventorySettings.json");
 //Add services to the container.
-
-builder.Services.Configure<InventorySettings>(builder.Configuration.GetSection("Values"));
-
-//builder.Services.AddSingleton(new InventoryServices("InventorySettings.json"));
 builder.Services.AddControllers();
+builder.Services.AddTransient<MethodsForProducts>();
+builder.Services.AddSingleton(new InventoryService("InventorySettings.json"));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

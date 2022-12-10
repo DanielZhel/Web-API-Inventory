@@ -1,9 +1,28 @@
 [
   {
-    "TypeOfProduct": "s",
-    "ProductName": "st",
-    "PriceOfProduct": 2
-  }
 
+    "TypeOfProduct": "Meat",
+    "ProductName": "Beaf",
+    "PriceOfProduct": 4.3
+
+  },
+  {
+
+    "TypeOfProduct": "Bread",
+    "ProductName": "Bun",
+    "PriceOfProduct": 0.1
+
+  },
+  {
+
+    "TypeOfProduct": "Lactic",
+    "ProductName": "Milk",
+    "PriceOfProduct": 0.7
+
+  }
 ]
+
+ 
+
+
   
